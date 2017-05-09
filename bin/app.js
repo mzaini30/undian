@@ -5,7 +5,6 @@ $(function() {
         location.href = "proses.html"
     })
 
-    $(".kembali").hide()
     arrayundian = localStorage.getItem("undian").split(",")
     $(".hasil").html(arrayundian[Math.floor(Math.random() * arrayundian.length)])
     $(".hasil").hide()
@@ -22,7 +21,6 @@ $(function() {
         $(".acak").hide()
         $(".hasil").show()
         $(".berhenti").hide()
-        $(".kembali").show()
     })
 
     $(".kembali").click(function() {
