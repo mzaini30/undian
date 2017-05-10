@@ -15,7 +15,7 @@ $(function() {
         if (x >= arrayundian.length) {
             x = 0
         }
-    }, 100)
+    }, 50)
 
     $(".berhenti").click(function() {
         $(".acak").hide()
