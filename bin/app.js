@@ -21,16 +21,16 @@ $(function() {
     }
 
     $(".proses").click(function() {
-        localStorage.setItem("undian", $(".data-undian").val().split("\n"))
-        location.href = "proses.html"
+        localStorage.setItem("undian", $(".data-undian").val().split("\n"));
+        location.href = "proses.html";
     })
 
-    arrayundian = localStorage.getItem("undian").split(",")
-    acakarrayundian = shuffle(arrayundian)
+    arrayundian = localStorage.getItem("undian").split(",");
+    acakarrayundian = shuffle(arrayundian);
 
-    $(".hasil").html(arrayundian[Math.floor(Math.random() * arrayundian.length)])
-    $(".hasil").hide()
-    x = 0
+    $(".hasil").html(arrayundian[Math.floor(Math.random() * arrayundian.length)]);
+    $(".hasil").hide();
+    x = 0;
     setInterval(function() {
         $(".acak").html(acakarrayundian[x])
         x++
