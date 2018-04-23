@@ -25,9 +25,10 @@ $(function() {
     $(".proses").click(function() {
         localStorage.setItem("undian", $(".data-undian").val().split("\n"));
         location.href = "proses.html";
-    })
+    });
 
     arrayundian = localStorage.getItem("undian").split(",");
+    arrayundian = arrayundian.filter(entry => entry.trim() != '');
     acakarrayundian = shuffle(arrayundian);
 
     $(".hasil").html(arrayundian[Math.floor(Math.random() * arrayundian.length)]);
@@ -39,7 +40,7 @@ $(function() {
         if (x >= arrayundian.length) {
             x = 0;
         }
-    }, 50)
+    }, 50);
 
     $(".berhenti").click(function() {
         $(".acak").hide();
