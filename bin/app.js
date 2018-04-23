@@ -1,5 +1,7 @@
 $(function() {
 
+    // fungsi shuffle
+
     function shuffle(array) {
         var currentIndex = array.length,
             temporaryValue, randomIndex;
@@ -32,21 +34,21 @@ $(function() {
     $(".hasil").hide();
     x = 0;
     setInterval(function() {
-        $(".acak").html(acakarrayundian[x])
-        x++
+        $(".acak").html(acakarrayundian[x]);
+        x++;
         if (x >= arrayundian.length) {
-            x = 0
+            x = 0;
         }
     }, 50)
 
     $(".berhenti").click(function() {
-        $(".acak").hide()
-        $(".hasil").show()
-        $(".berhenti").hide()
-    })
+        $(".acak").hide();
+        $(".hasil").show();
+        $(".berhenti").hide();
+    });
 
     $(".kembali").click(function() {
-        location.href = "index.html"
+        location.href = "index.html";
     })
 
 })
